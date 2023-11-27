@@ -1,4 +1,5 @@
 # PBLF
+## 将screen_height宏定义为屏幕宽，screen_width宏定义为屏幕长
 IMAGE bk;//代表背景
 IMAGE tube1_up, tube1_down;//第一对管道
 IMAGE tube2_up, tube2_down;//第二对管道
