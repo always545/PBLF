@@ -15,6 +15,7 @@
 只实现3个部分，管道和鸟的移动，管道和鸟的贴图，碰撞的检测。
 
 **/  
+IMAGE endtitle;//菜
 IMAGE Title;//标题
 IMAGE bird[3];//实现开始界面的动态鸟，来个老大
 IMAGE bk,bk1;//代表背景
@@ -77,11 +78,17 @@ void pre() {
 	loadimage(&tube2_down, _T("res\\pie_down.png"));
 	loadimage(&button, _T("res\\start_button.png"));
 	loadimage(&land, _T("res\\land.png"));
-	loadimage(&byd1, _T("res//jkrqq3ba.png"));
+	loadimage(&byd1, _T("res//origin-bird.png"));
 	loadimage(&Title, _T("res\\title.jpg"));
 	loadimage(&bird[0], _T("res\\birds.png"));
 	loadimage(&bird[1], _T("res\\origin-bird.jpg"));
 	loadimage(&bird[2], _T("res\\ld.jpg"));
+	loadimage(&endtitle, _T("res\\noob.jpg"));
+}
+void end() {
+	while (!get_control()) {
+		putimage(0, screen_height/6, &endtitle);
+	}
 }
 //初始化
 void init() {
@@ -138,5 +145,6 @@ int main() {
 	initgraph(screen_height, screen_width);
 	init();
 	start();
+	end();
 	return 0;
 }
